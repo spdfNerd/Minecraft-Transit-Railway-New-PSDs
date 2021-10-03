@@ -116,6 +116,12 @@ public class MTR implements ModInitializer, IPacket {
 		registerItem("psd_door_2", Items.PSD_DOOR_2);
 		registerItem("psd_glass_2", Items.PSD_GLASS_2);
 		registerItem("psd_glass_end_2", Items.PSD_GLASS_END_2);
+		registerItem("psd_door_3", Items.PSD_DOOR_3);
+		registerItem("psd_glass_3", Items.PSD_GLASS_3);
+		registerItem("psd_glass_end_3", Items.PSD_GLASS_END_3);
+		registerItem("psd_door_4", Items.PSD_DOOR_4);
+		registerItem("psd_glass_4", Items.PSD_GLASS_4);
+		registerItem("psd_glass_end_4", Items.PSD_GLASS_END_4);
 		registerItem("rail_connector_1_wooden", Items.RAIL_CONNECTOR_1_WOODEN);
 		registerItem("rail_connector_1_wooden_one_way", Items.RAIL_CONNECTOR_1_WOODEN_ONE_WAY);
 		registerItem("rail_connector_2_stone", Items.RAIL_CONNECTOR_2_STONE);
@@ -163,6 +169,12 @@ public class MTR implements ModInitializer, IPacket {
 		registerBlock("psd_door_2", Blocks.PSD_DOOR_2);
 		registerBlock("psd_glass_2", Blocks.PSD_GLASS_2);
 		registerBlock("psd_glass_end_2", Blocks.PSD_GLASS_END_2);
+		registerBlock("psd_door_3", Blocks.PSD_DOOR_3);
+		registerBlock("psd_glass_3", Blocks.PSD_GLASS_3);
+		registerBlock("psd_glass_end_3", Blocks.PSD_GLASS_END_3);
+		registerBlock("psd_door_4", Blocks.PSD_DOOR_4);
+		registerBlock("psd_glass_4", Blocks.PSD_GLASS_4);
+		registerBlock("psd_glass_end_4", Blocks.PSD_GLASS_END_4);
 		registerBlock("psd_top", Blocks.PSD_TOP);
 		registerBlock("rail", Blocks.RAIL, ItemGroups.CORE);
 		registerBlock("railway_sign_2_even", Blocks.RAILWAY_SIGN_2_EVEN, ItemGroups.RAILWAY_FACILITIES);
@@ -287,21 +299,12 @@ public class MTR implements ModInitializer, IPacket {
 
 	private static SoundEvent[] registerSoundEvents(int size, int groupSize, String path) {
 		return IntStream.range(0, size).mapToObj(i -> {
-			String group;
-			switch (i % groupSize) {
-				case 0:
-					group = "a";
-					break;
-				case 1:
-					group = "b";
-					break;
-				case 2:
-					group = "c";
-					break;
-				default:
-					group = "";
-					break;
-			}
+			String group = switch (i % groupSize) {
+				case 0 -> "a";
+				case 1 -> "b";
+				case 2 -> "c";
+				default -> "";
+			};
 			return registerSoundEvent(path + (i / 3) + group);
 		}).toArray(SoundEvent[]::new);
 	}

@@ -21,6 +21,12 @@ public interface Items {
 	Item PSD_DOOR_2 = new ItemPSDAPGBase(ItemPSDAPGBase.EnumPSDAPGItem.PSD_APG_DOOR, ItemPSDAPGBase.EnumPSDAPGType.PSD_2);
 	Item PSD_GLASS_2 = new ItemPSDAPGBase(ItemPSDAPGBase.EnumPSDAPGItem.PSD_APG_GLASS, ItemPSDAPGBase.EnumPSDAPGType.PSD_2);
 	Item PSD_GLASS_END_2 = new ItemPSDAPGBase(ItemPSDAPGBase.EnumPSDAPGItem.PSD_APG_GLASS_END, ItemPSDAPGBase.EnumPSDAPGType.PSD_2);
+	Item PSD_DOOR_3 = new ItemPSDAPGBase(ItemPSDAPGBase.EnumPSDAPGItem.PSD_APG_DOOR, ItemPSDAPGBase.EnumPSDAPGType.PSD_3);
+	Item PSD_GLASS_3 = new ItemPSDAPGBase(ItemPSDAPGBase.EnumPSDAPGItem.PSD_APG_GLASS, ItemPSDAPGBase.EnumPSDAPGType.PSD_3);
+	Item PSD_GLASS_END_3 = new ItemPSDAPGBase(ItemPSDAPGBase.EnumPSDAPGItem.PSD_APG_GLASS_END, ItemPSDAPGBase.EnumPSDAPGType.PSD_3);
+	Item PSD_DOOR_4 = new ItemPSDAPGBase(ItemPSDAPGBase.EnumPSDAPGItem.PSD_APG_DOOR, ItemPSDAPGBase.EnumPSDAPGType.PSD_4);
+	Item PSD_GLASS_4 = new ItemPSDAPGBase(ItemPSDAPGBase.EnumPSDAPGItem.PSD_APG_GLASS, ItemPSDAPGBase.EnumPSDAPGType.PSD_4);
+	Item PSD_GLASS_END_4 = new ItemPSDAPGBase(ItemPSDAPGBase.EnumPSDAPGItem.PSD_APG_GLASS_END, ItemPSDAPGBase.EnumPSDAPGType.PSD_4);
 	Item RAIL_CONNECTOR_1_WOODEN = new ItemRailModifier(false, RailType.WOODEN);
 	Item RAIL_CONNECTOR_1_WOODEN_ONE_WAY = new ItemRailModifier(true, RailType.WOODEN);
 	Item RAIL_CONNECTOR_2_STONE = new ItemRailModifier(false, RailType.STONE);

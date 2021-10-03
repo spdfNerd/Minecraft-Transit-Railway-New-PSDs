@@ -14,6 +14,11 @@ public class BlockPSDGlassEnd extends BlockPSDAPGGlassEndBase {
 
 	@Override
 	public Item asItem() {
-		return style == 0 ? Items.PSD_GLASS_END_1 : Items.PSD_GLASS_END_2;
+		return switch (style) {
+			default -> Items.PSD_GLASS_END_1;
+			case 1 -> Items.PSD_GLASS_END_2;
+			case 2 -> Items.PSD_GLASS_END_3;
+			case 3 -> Items.PSD_GLASS_END_4;
+		};
 	}
 }

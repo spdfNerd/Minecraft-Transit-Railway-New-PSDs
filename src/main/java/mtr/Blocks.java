@@ -39,6 +39,14 @@ public interface Blocks {
 	Block PSD_DOOR_2 = new BlockPSDDoor(1);
 	Block PSD_GLASS_2 = new BlockPSDGlass(1);
 	Block PSD_GLASS_END_2 = new BlockPSDGlassEnd(1);
+	// TODO: WRL PSD
+	Block PSD_DOOR_3 = new BlockPSDDoor(2);
+	Block PSD_GLASS_3 = new BlockPSDGlass(2);
+	Block PSD_GLASS_END_3 = new BlockPSDGlassEnd(2);
+	// TODO: TKOL PSD
+	Block PSD_DOOR_4 = new BlockPSDDoor(3);
+	Block PSD_GLASS_4 = new BlockPSDGlass(3);
+	Block PSD_GLASS_END_4 = new BlockPSDGlassEnd(3);
 	Block PSD_TOP = new BlockPSDTop();
 	Block RAIL = new BlockRail(FabricBlockSettings.of(Material.METAL, MapColor.IRON_GRAY).hardness(2).nonOpaque());
 	Block RAILWAY_SIGN_2_EVEN = new BlockRailwaySign(2, false);

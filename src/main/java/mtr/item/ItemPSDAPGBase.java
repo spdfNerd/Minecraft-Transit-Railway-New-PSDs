@@ -77,36 +77,33 @@ public class ItemPSDAPGBase extends Item implements IBlock {
 	}
 
 	private BlockState getBlockStateFromItem() {
-		switch (type) {
-			case PSD_1:
-				switch (item) {
-					case PSD_APG_DOOR:
-						return Blocks.PSD_DOOR_1.getDefaultState();
-					case PSD_APG_GLASS:
-						return Blocks.PSD_GLASS_1.getDefaultState();
-					case PSD_APG_GLASS_END:
-						return Blocks.PSD_GLASS_END_1.getDefaultState();
-				}
-			case PSD_2:
-				switch (item) {
-					case PSD_APG_DOOR:
-						return Blocks.PSD_DOOR_2.getDefaultState();
-					case PSD_APG_GLASS:
-						return Blocks.PSD_GLASS_2.getDefaultState();
-					case PSD_APG_GLASS_END:
-						return Blocks.PSD_GLASS_END_2.getDefaultState();
-				}
-			case APG:
-				switch (item) {
-					case PSD_APG_DOOR:
-						return Blocks.APG_DOOR.getDefaultState();
-					case PSD_APG_GLASS:
-						return Blocks.APG_GLASS.getDefaultState();
-					case PSD_APG_GLASS_END:
-						return Blocks.APG_GLASS_END.getDefaultState();
-				}
-		}
-		return net.minecraft.block.Blocks.AIR.getDefaultState();
+		return switch (type) {
+			case PSD_1 -> switch (item) {
+				case PSD_APG_DOOR -> Blocks.PSD_DOOR_1.getDefaultState();
+				case PSD_APG_GLASS -> Blocks.PSD_GLASS_1.getDefaultState();
+				case PSD_APG_GLASS_END -> Blocks.PSD_GLASS_END_1.getDefaultState();
+			};
+			case PSD_2 -> switch (item) {
+				case PSD_APG_DOOR -> Blocks.PSD_DOOR_2.getDefaultState();
+				case PSD_APG_GLASS -> Blocks.PSD_GLASS_2.getDefaultState();
+				case PSD_APG_GLASS_END -> Blocks.PSD_GLASS_END_2.getDefaultState();
+			};
+			case PSD_3 -> switch (item) {
+				case PSD_APG_DOOR -> Blocks.PSD_DOOR_3.getDefaultState();
+				case PSD_APG_GLASS -> Blocks.PSD_GLASS_3.getDefaultState();
+				case PSD_APG_GLASS_END -> Blocks.PSD_GLASS_END_3.getDefaultState();
+			};
+			case PSD_4 -> switch (item) {
+				case PSD_APG_DOOR -> Blocks.PSD_DOOR_4.getDefaultState();
+				case PSD_APG_GLASS -> Blocks.PSD_GLASS_4.getDefaultState();
+				case PSD_APG_GLASS_END -> Blocks.PSD_GLASS_END_4.getDefaultState();
+			};
+			case APG -> switch (item) {
+				case PSD_APG_DOOR -> Blocks.APG_DOOR.getDefaultState();
+				case PSD_APG_GLASS -> Blocks.APG_GLASS.getDefaultState();
+				case PSD_APG_GLASS_END -> Blocks.APG_GLASS_END.getDefaultState();
+			};
+		};
 	}
 
 	public static boolean blocksNotReplaceable(ItemUsageContext context, int width, int height, Block blacklistBlock) {
@@ -135,7 +132,7 @@ public class ItemPSDAPGBase extends Item implements IBlock {
 		return false;
 	}
 
-	public enum EnumPSDAPGType {PSD_1, PSD_2, APG}
+	public enum EnumPSDAPGType {PSD_1, PSD_2, PSD_3, PSD_4, APG}
 
 	public enum EnumPSDAPGItem implements StringIdentifiable {
 
